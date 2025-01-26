@@ -1,0 +1,47 @@
+/* Ticketpage styles */
+.ticket-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ticket-title {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .ticket-card {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ticket-section {
+    margin-bottom: 20px;
+  }
+  
+  .ticket-subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .passenger-details {
+    margin-bottom: 15px;
+  }
+  
+  strong {
+    font-weight: 600;
+  }
+  
+  .row {
+    margin-bottom: 10px;
+  }
+  

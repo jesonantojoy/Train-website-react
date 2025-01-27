@@ -14,8 +14,8 @@ const TrainsPage = () => {
 
   useEffect(() => {
     if (!fixedTrains.length && trains.length > 0) {
-      const shuffledTrains = [...trains].sort(() => Math.random() - 0.5); // Shuffle once
-      dispatch(setFixedTrains(shuffledTrains.slice(0, 6))); // Save to Redux
+      const shuffledTrains = [...trains].sort(() => Math.random() - 0.5); 
+      dispatch(setFixedTrains(shuffledTrains.slice(0, 6)));
     }
   }, [trains, fixedTrains, dispatch]);
 

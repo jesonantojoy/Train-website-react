@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Card, Image, Button } from "react-bootstrap";
+import { Container, Card, Image } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -8,9 +8,7 @@ const ProfilePage = () => {
 
   return (
     <Container className="d-flex justify-content-center mt-5">
-      {/* Vertical Card Layout */}
       <Card className="p-4" style={{ width: "400px", borderRadius: "15px", boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" }}>
-        {/* Header with logo and website name */}
         <div className="text-center mb-4">
           <Image
             src="https://cdn.vectorstock.com/i/500p/19/22/retro-train-vintage-emblem-vector-20521922.jpg"
@@ -21,8 +19,6 @@ const ProfilePage = () => {
           <h3 style={{ color: "#1e88e5" }}>RailConnect</h3>
           <p className="text-muted">Your Trusted Train Booking Partner</p>
         </div>
-
-        {/* Profile Information */}
         <h4 className="text-center mb-4">Profile</h4>
 
         <div>

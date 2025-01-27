@@ -13,9 +13,8 @@ const PassengersPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // Validation functions
-  const isValidName = (name) => /^[A-Za-z\s]+$/.test(name); // Only letters and spaces allowed
-  const isValidAge = (age) => /^\d+$/.test(age) && age >= 1 && age <= 120; // Only numbers, between 1 and 120
+  const isValidName = (name) => /^[A-Za-z\s]+$/.test(name); 
+  const isValidAge = (age) => /^\d+$/.test(age) && age >= 1 && age <= 120; 
   const newErrors = {};
 
   const handleChange = (index, field, value) => {
@@ -28,8 +27,6 @@ const PassengersPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Validation before submitting
     for (let i = 0; i < details.length; i++) {
       const passenger = details[i];
 
@@ -51,7 +48,6 @@ const PassengersPage = () => {
 
   return (
     <Container>
-      {/* Header with logo and website name */}
       <div className="text-center mb-4">
         <Image
           src="https://cdn.vectorstock.com/i/500p/19/22/retro-train-vintage-emblem-vector-20521922.jpg" // Replace with your logo's file path
@@ -79,7 +75,7 @@ const PassengersPage = () => {
                     value={passenger.name}
                     onChange={(e) => handleChange(index, "name", e.target.value)}
                     required
-                    maxLength={30} // Limit the maximum length to 30
+                    maxLength={30}
                   />
                 </Form.Group>
 
@@ -91,8 +87,8 @@ const PassengersPage = () => {
                     value={passenger.age}
                     onChange={(e) => handleChange(index, "age", e.target.value)}
                     required
-                    min="1" // Set the minimum valid value for age
-                    max="120" // Set the maximum valid value for age
+                    min="1" 
+                    max="120" 
                   />
                 </Form.Group>
 

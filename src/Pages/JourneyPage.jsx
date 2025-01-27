@@ -5,7 +5,7 @@ import { selectUserDetails } from "../Redux/selectors";
 import { setJourneyDetails, setTrainOptions } from "../Redux/trainSlice";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Select from "react-select"; // For searchable dropdown
+import Select from "react-select"; 
 
 const JourneyPage = () => {
   const user = useSelector(selectUserDetails);
@@ -332,7 +332,6 @@ const JourneyPage = () => {
 
   return (
     <Container>
-      {/* Header with logo and website name */}
       <div className="text-center mb-4">
         <Image
           src="https://cdn.vectorstock.com/i/500p/19/22/retro-train-vintage-emblem-vector-20521922.jpg"

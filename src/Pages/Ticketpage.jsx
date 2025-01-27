@@ -20,7 +20,7 @@ const passengers = useSelector(selectPassengers);
   
     if (!users || !users.name || !users.email) {
       alert("User details are missing. Please register to view tickets.");
-      navigate("/"); // Redirect to the register page
+      navigate("/");
     }
   }, [users, journeyDetails, passengers, navigate]);
   
@@ -30,8 +30,8 @@ const passengers = useSelector(selectPassengers);
     const maxSeatNumber = 81;
     const seatNumber = Math.floor(Math.random() * maxSeatNumber) + 1;
     const berth = berthTypes[Math.floor(Math.random() * berthTypes.length)];
-    const coachPrefix = journeyDetails?.seatType === "seater" ? "D" : "S"; // D for Seater, S for Sleeper/AC
-    const coachNumber = Math.floor(Math.random() * 7) + 1; // Coach numbers from 1 to 7
+    const coachPrefix = journeyDetails?.seatType === "seater" ? "D" : "S"; 
+    const coachNumber = Math.floor(Math.random() * 7) + 1; 
     return journeyDetails?.seatType === "seater"
       ? `D${coachNumber}-${seatNumber}`
       : `S${coachNumber}-${berth}-${seatNumber}`;
@@ -60,7 +60,7 @@ const passengers = useSelector(selectPassengers);
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
         }}
       >
-        {/* Header with logo and website name */}
+  
         <div className="text-center mb-4">
           <Image
             src="https://cdn.vectorstock.com/i/500p/19/22/retro-train-vintage-emblem-vector-20521922.jpg"
@@ -76,7 +76,6 @@ const passengers = useSelector(selectPassengers);
 
         <hr />
 
-        {/* Train Details */}
         <div className="mb-4">
           <Row>
             <Col>
@@ -122,7 +121,6 @@ const passengers = useSelector(selectPassengers);
 
         <hr />
 
-        {/* Passenger Details */}
         <div className="mb-4">
           <h5>Passenger Details:</h5>
           {passengers.map((passenger, index) => {
@@ -148,7 +146,6 @@ const passengers = useSelector(selectPassengers);
 
         <hr />
 
-        {/* User Details */}
         <div className="text-center">
           <p>
             <strong>Booked By:</strong> {users.name}
